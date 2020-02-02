@@ -4,18 +4,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.wallet.entity.Wallet;
-import com.wallet.repository.WalletRepository;
+import com.wallet.service.UserWalletService;
 import com.wallet.service.WalletService;
 
 @Service
 public class WalletServiceImpl implements WalletService{
 	
 	@Autowired
-	private WalletRepository repository;
-	
+	private WalletService repository;
+
 	@Override
 	public Wallet save(Wallet wallet) {
 		return repository.save(wallet);
 	}
+	
+	
 
 }
